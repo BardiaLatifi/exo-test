@@ -4,3 +4,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.circle-bg {
+    fill: none;
+    stroke: #e0e0e0; /* Background color */
+    stroke-width: 10;
+}
+.circle-outer {
+    fill: none;
+    stroke: rgb(47, 47, 47); /* Background color */
+    stroke-width: 10;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: #4caf50; /* Progress color */
+    stroke-width: 10;
+    transition: stroke-dashoffset 0.5s ease; /* Animation for the progress */
+}
+
+.indicator-number {
+    font-size: 24px; /* Adjust font size as needed */
+    fill: rgb(47, 47, 47); /* Text color */
+}
