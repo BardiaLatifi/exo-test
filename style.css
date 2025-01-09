@@ -1,30 +1,123 @@
 /**** GENERAL ****/
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #main {
+    margin: 2em auto;
+    background-color: lightgray;
+  }
+  
+  /**** Carousel ****/
 
+  /* Cards */
+  #carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 220px;
+    margin: auto;
+  }
+  
+  #cardsCont {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .card {
+    width: 90px;
+    height: 120px;
+    background-color: lightblue;
+    border: 3px solid rgb(218, 218, 218);
+    border-radius: 10px;
+  }
 
-.circle-bg {
+  .selected-card {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.1), 0 0 50px hsla(144, 100%, 50%, 0.625);
+    border: 3px solid hsla(113, 100%, 86%, 0.673);
+    margin: 0px 3.5em;
+  }
+  
+  /* Indicator Line */
+  #indicatorLine {
+    margin: auto;
+  }
+  
+  /* Control Buttons */
+  #carouselControls {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 140px;
+    z-index: 10;
+  }
+
+  button {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #leftBtn {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid rgb(50, 50, 50);
+  }
+  
+  #rightBtn {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid rgb(50, 50, 50);
+  }
+  
+
+  /**** Benchmark ****/
+
+  #benchmark {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+  }
+  
+  /* Left-Side */
+
+  /* Benchmarks */
+
+  #benchmarksCont {
+    margin: auto;
+  }
+  
+  .circle-bg {
     fill: none;
-    stroke: #e0e0e0; /* Background color */
+    stroke: #e0e0e0;
     stroke-width: 10;
-}
-.circle-outer {
+  }
+  
+  .circle-outer {
     fill: none;
-    stroke: rgb(47, 47, 47); /* Background color */
+    stroke: rgb(47, 47, 47);
     stroke-width: 10;
-}
-
-.circle-progress {
+  }
+  
+  .circle-progress {
     fill: none;
-    stroke: #4caf50; /* Progress color */
+    stroke: #4caf50;
     stroke-width: 10;
-    transition: stroke-dashoffset 0.5s ease; /* Animation for the progress */
-}
-
-.indicator-number {
-    font-size: 24px; /* Adjust font size as needed */
-    fill: rgb(47, 47, 47); /* Text color */
-}
+  }
+  
+  .indicator-number {
+    font-size: 24px;
+    fill: rgb(47, 47, 47);
+  }
+  
+  /* Right-Side */
+  

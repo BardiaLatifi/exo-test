@@ -8,126 +8,105 @@
     <title>Benchmark</title>
   </head>
   <body>
-    <div id="carousel">
-      <button id="leftBtn"></button>
-      <button id="rightBtn"></button>
-      <div id="cardsCont">
-        <div class="card">
-          <img src="" alt="" />
+    <div id="main">
+      <div id="carousel">
+        <div id="cardsCont">
+        <div class="card"><img src="image1.jpg" alt="Image 1"></div>
+        <div class="card"><img src="image2.jpg" alt="Image 2"></div>
+        <div class="card"><img src="image3.jpg" alt="Image 3"></div>
+        <div class="card selected-card"><img src="image4.jpg" alt="Image 4"></div>
+        <div class="card"><img src="image5.jpg" alt="Image 5"></div>
+        <div class="card"><img src="image6.jpg" alt="Image 6"></div>
+        <div class="card"><img src="image7.jpg" alt="Image 7"></div>
         </div>
-        <div class="card">
-          <img src="" alt="" />
+        <div id="carouselControls">
+          <button id="leftBtn"></button>
+          <button id="rightBtn"></button>
         </div>
-        <div class="card">
-          <img src="" alt="" />
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-        </div>
-        <div class="card">
-          <img src="" alt="" />
-        </div>
-        <div class="card">
-          <img src="" alt="" />
+        <div id="indicatorLine">
+          <svg width="550" height="100">
+            <line x1="0" y1="50" x2="120" y2="50" stroke="gray" stroke-width="2"/>
+            <line x1="120" y1="50" x2="180" y2="50" stroke="gray" stroke-width="2"/>
+            <line x1="180" y1="50" x2="250" y2="50" stroke="gray" stroke-width="2"/>
+            <line x1="250" y1="50" x2="320" y2="50" stroke="black" stroke-width="2"/>
+            <line x1="320" y1="50" x2="390" y2="50" stroke="gray" stroke-width="2"/>
+            <line x1="390" y1="50" x2="460" y2="50" stroke="gray" stroke-width="2"/>
+            <line x1="460" y1="50" x2="530" y2="50" stroke="gray" stroke-width="2"/>
+          </svg>
         </div>
       </div>
-      <div class="carousel-indicator">
-        <div class="indicator active"></div>
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-      </div>
-    </div>
-    <div id="benchmark">
-      <div class="left-info-cont"></div>
-      <div class="fps-indicator-cont">
-        <svg class="circular-indicator" width="150" height="150">
-          <circle class="circle-outer" cx="75" cy="75" r="53" />
-          <circle class="circle-bg" cx="75" cy="75" r="45" />
-          <circle
-            class="circle-progress"
-            cx="75"
-            cy="75"
-            r="45"
-            stroke-dasharray="283"
-            stroke-dashoffset="70"
-          />
-          <text
-            x="50%"
-            y="50%"
-            text-anchor="middle"
-            dominant-baseline="middle"
-            class="indicator-number"
-          >
-            75
-          </text>
-        </svg>
-        <svg class="circular-indicator" width="150" height="150">
-          <circle class="circle-outer" cx="75" cy="75" r="53" />
-          <circle class="circle-bg" cx="75" cy="75" r="45" />
-          <circle
-            class="circle-progress"
-            cx="75"
-            cy="75"
-            r="45"
-            stroke-dasharray="283"
-            stroke-dashoffset="70"
-          />
-          <text
-            x="50%"
-            y="50%"
-            text-anchor="middle"
-            dominant-baseline="middle"
-            class="indicator-number"
-          >
-            75
-          </text>
-        </svg>
-        <svg class="circular-indicator" width="150" height="150">
-          <circle class="circle-outer" cx="75" cy="75" r="53" />
-          <circle class="circle-bg" cx="75" cy="75" r="45" />
-          <circle
-            class="circle-progress"
-            cx="75"
-            cy="75"
-            r="45"
-            stroke-dasharray="283"
-            stroke-dashoffset="70"
-          />
-          <text
-            x="50%"
-            y="50%"
-            text-anchor="middle"
-            dominant-baseline="middle"
-            class="indicator-number"
-          >
-            75
-          </text>
-        </svg>
-      </div>
-      <div class="right-info-cont">
-        <div id="circles">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
+      <div id="benchmark">
+        <div id="leftSideCont"></div>
+        <div id="benchmarksCont">
+          <svg class="circular-indicator" width="150" height="150">
+            <circle class="circle-outer" cx="75" cy="75" r="53" />
+            <circle class="circle-bg" cx="75" cy="75" r="45" />
+            <circle
+              class="circle-progress"
+              cx="75"
+              cy="75"
+              r="45"
+              stroke-dasharray="283"
+              stroke-dashoffset="70"
+            />
+            <text
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="indicator-number"
+            >
+              75
+            </text>
+          </svg>
+          <svg class="circular-indicator" width="150" height="150">
+            <circle class="circle-outer" cx="75" cy="75" r="53" />
+            <circle class="circle-bg" cx="75" cy="75" r="45" />
+            <circle
+              class="circle-progress"
+              cx="75"
+              cy="75"
+              r="45"
+              stroke-dasharray="283"
+              stroke-dashoffset="70"
+            />
+            <text
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="indicator-number"
+            >
+              75
+            </text>
+          </svg>
+          <svg class="circular-indicator" width="150" height="150">
+            <circle class="circle-outer" cx="75" cy="75" r="53" />
+            <circle class="circle-bg" cx="75" cy="75" r="45" />
+            <circle
+              class="circle-progress"
+              cx="75"
+              cy="75"
+              r="45"
+              stroke-dasharray="283"
+              stroke-dashoffset="70"
+            />
+            <text
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="indicator-number"
+            >
+              75
+            </text>
+          </svg>
         </div>
-        <div class="info-text-cont">
-          <p id="plus30" class="info-text"></p>
-          <p id="plus60"></p>
-          <p id="plus120"></p>
-        </div>
+        <div id="RightSideCont">
+          <div id="circles"></div>
       </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
