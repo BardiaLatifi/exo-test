@@ -35,9 +35,14 @@
           </svg>
         </div>
       </div>
-      <div id="benchmark">
+      <div id="benchmarkGrid">
         <div id="leftSideCont"></div>
         <div id="benchmarksCont">
+          <div id="resolutionsCont">
+            <p class="resolution">FHD</p>
+            <p class="resolution">2K</p>
+            <p class="resolution">4K</p>
+          </div>
           <svg class="circular-indicator" width="150" height="150">
             <circle class="circle-outer" cx="75" cy="75" r="53" />
             <circle class="circle-bg" cx="75" cy="75" r="45" />
@@ -103,7 +108,25 @@
           </svg>
         </div>
         <div id="RightSideCont">
-          <div id="circles"></div>
+          <svg id="resolutionGuideCont" width="30" height="100%">
+            <defs>
+                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                    <feOffset dx="2" dy="2" result="offsetblur" />
+                    <feFlood flood-color="rgba(0, 0, 0, 0.4)" />
+                    <feComposite in2="offsetblur" operator="in" />
+                    <feMerge>
+                        <feMergeNode />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+        
+            <circle class="resolution-guide" cx="20" cy="12" r="6" stroke="yellow" filter="url(#shadow)" />
+            <circle class="resolution-guide" cx="20" cy="52" r="6" stroke="lightgreen" filter="url(#shadow)" />
+            <circle class="resolution-guide" cx="20" cy="92" r="6" stroke="lime" filter="url(#shadow)" />
+        </svg>
+        
       </div>
     </div>
 
