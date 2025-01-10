@@ -106,7 +106,8 @@
     background-color: lightblue;
   }
 
-  #resolutionsCont, p {
+  #resolutionsCont,
+  #resolutionsCont p {
     display: flex;
     font-size: 1.3rem;
     justify-content: space-around;
@@ -139,17 +140,33 @@
   /* Right-Side */
   
   #RightSideCont {
+    display: flex;
     height: 60%;
     align-self: center;
     background-color: lightcoral;
     border-left: 4px solid gray;
   }
 
-  #resolutionGuideCont {
+  #colorGuideCont {
     background-color: lightpink;
   }
 
-  .resolution-guide {
+  .fps-guide-ring {
     fill: none;
     stroke-width: 4;
+  }
+
+  #fpsTextCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  #fpsTextCont strong{
+    margin-right: 8px;
+  }
+
+  #fpsTextCont p{
+    opacity: 0.7;
   }

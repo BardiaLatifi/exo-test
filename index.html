@@ -108,7 +108,7 @@
           </svg>
         </div>
         <div id="RightSideCont">
-          <svg id="resolutionGuideCont" width="30" height="100%">
+          <svg id="colorGuideCont" width="30" height="100%">
             <defs>
                 <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
@@ -122,10 +122,15 @@
                 </filter>
             </defs>
         
-            <circle class="resolution-guide" cx="20" cy="12" r="6" stroke="yellow" filter="url(#shadow)" />
-            <circle class="resolution-guide" cx="20" cy="52" r="6" stroke="lightgreen" filter="url(#shadow)" />
-            <circle class="resolution-guide" cx="20" cy="92" r="6" stroke="lime" filter="url(#shadow)" />
+            <circle class="fps-guide-ring" cx="20" cy="12" r="6" stroke="yellow" filter="url(#shadow)" />
+            <circle class="fps-guide-ring" cx="20" cy="92" r="6" stroke="lime" filter="url(#shadow)" />
+            <circle class="fps-guide-ring" cx="20" cy="52" r="6" stroke="lightgreen" filter="url(#shadow)" />
         </svg>
+        <div id="fpsTextCont">
+          <p><strong>30+</strong>FPS (ACCEPTABLE)</p>
+          <p><strong>60+</strong>FPS (OPTIMAL)</p>
+          <p><strong>120+</strong>FPS (PROFESSIONAL)</p>
+        </div>
         
       </div>
     </div>
