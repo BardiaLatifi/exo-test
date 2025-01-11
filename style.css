@@ -6,10 +6,13 @@
     box-sizing: border-box;
     user-select: none;
   }
+
+  body {
+    background-color: lightgray;
+  }
   
   #main {
     margin: 2em auto;
-    background-color: lightgray;
   }
   
 /**** Carousel ****/
@@ -97,11 +100,19 @@
   
   /* Left-Side */
   #leftSideCont {
+    display: flex;
     width: 100%;
     height: 60%;
     align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: end;
     border-right: 4px solid gray;
-    background-color: lightcoral;
+  }
+
+  #leftSideCont img {
+    width: 50%;
+    max-height: 50%;
   }
 
 
@@ -149,12 +160,7 @@
     display: flex;
     height: 60%;
     align-self: center;
-    background-color: lightcoral;
     border-left: 4px solid gray;
-  }
-
-  #colorGuideCont {
-    background-color: lightpink;
   }
 
   .fps-guide-ring {
