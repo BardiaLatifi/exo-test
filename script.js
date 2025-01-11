@@ -1,3 +1,5 @@
+import { gamesArray } from "./gameObjects.js";
+
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 
@@ -13,25 +15,9 @@ const images = [
 
 let selectedCard = "";
 
-// Function to update the selectedCard variable
-function updateSelectedCard() {
-  const cards = document.querySelectorAll(".card");
-  const middleCard = cards[3];
-  const imgElement = middleCard.querySelector("img");
-  const imgSrc = imgElement.src;
-  
-  console.log(imgSrc);
-}
 
-leftBtn.addEventListener("click", () => {
-  leftBtnPressed();
-  updateSelectedCard();
-});
-
-rightBtn.addEventListener("click", () => {
-  rightBtnPressed();
-  updateSelectedCard();
-});
+leftBtn.addEventListener("click", () => {leftBtnPressed()});
+rightBtn.addEventListener("click", () => {rightBtnPressed()});
 
 function leftBtnPressed() {
   // Shift the images to the left
@@ -56,10 +42,6 @@ function rightBtnPressed() {
     img.src = images[index];
   });
 }
-
-// Initialize the selectedCard at the beginning
-updateSelectedCard();
-
 
 function fpsHandler() {
   const fhdProgress = document.getElementById("fhdProgress");
