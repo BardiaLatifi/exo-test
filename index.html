@@ -18,15 +18,16 @@
         </div>
         <div id="indicatorLine">
           <svg width="550" height="100">
-            <line x1="0" y1="50" x2="120" y2="50" stroke="gray" stroke-width="2"/>
-            <line x1="120" y1="50" x2="180" y2="50" stroke="gray" stroke-width="2"/>
-            <line x1="180" y1="50" x2="250" y2="50" stroke="gray" stroke-width="2"/>
-            <line x1="250" y1="50" x2="320" y2="50" stroke="black" stroke-width="2"/>
-            <line x1="320" y1="50" x2="390" y2="50" stroke="gray" stroke-width="2"/>
-            <line x1="390" y1="50" x2="460" y2="50" stroke="gray" stroke-width="2"/>
-            <line x1="460" y1="50" x2="530" y2="50" stroke="gray" stroke-width="2"/>
+            <line id="line1" class="indicator-line" x1="60" y1="50" x2="120" y2="50" stroke="gray" stroke-width="2"/>
+            <line id="line2" class="indicator-line" x1="120" y1="50" x2="180" y2="50" stroke="gray" stroke-width="2"/>
+            <line id="line3" class="indicator-line" x1="180" y1="50" x2="240" y2="50" stroke="gray" stroke-width="2"/>
+            <line id="line4" class="indicator-line" x1="240" y1="50" x2="300" y2="50" stroke="black" stroke-width="2"/>
+            <line id="line5" class="indicator-line" x1="300" y1="50" x2="360" y2="50" stroke="gray" stroke-width="2"/>
+            <line id="line6" class="indicator-line" x1="360" y1="50" x2="420" y2="50" stroke="gray" stroke-width="2"/>
+            <line id="line7" class="indicator-line" x1="420" y1="50" x2="480" y2="50" stroke="gray" stroke-width="2"/>
           </svg>
         </div>
+        
       </div>
       <div id="benchmarkGrid">
         <div id="leftSideCont"><img src="./img/powerup.png"></div>
@@ -47,6 +48,7 @@
               r="45"
               stroke-dasharray="283"
               stroke-dashoffset="70"
+              stroke="black"
             />
             <text
               id="fhdText"
@@ -64,11 +66,13 @@
             <circle class="circle-bg" cx="75" cy="75" r="45" />
             <circle
               class="circle-progress"
+              id="twoKProgress"
               cx="75"
               cy="75"
               r="45"
               stroke-dasharray="283"
               stroke-dashoffset="70"
+              stroke="black"
             />
             <text
               id="towKText"
@@ -86,11 +90,13 @@
             <circle class="circle-bg" cx="75" cy="75" r="45" />
             <circle
               class="circle-progress"
+              id="fourKProgress"
               cx="75"
               cy="75"
               r="45"
               stroke-dasharray="283"
               stroke-dashoffset="70"
+              stroke="black"
             />
             <text
               id="fourKText"
