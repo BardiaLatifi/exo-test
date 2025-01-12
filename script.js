@@ -161,11 +161,11 @@ function benchmarkHandler() {
 
         twoKText.textContent = gamesArray[2].fps.twoK;
         towKProgress.setAttribute("stroke-dashoffset", "141");
-        towKProgress.setAttribute("stroke", "yellow");
+        towKProgress.setAttribute("stroke", "lightgreen");
 
         fourKText.textContent = gamesArray[2].fps.fourK;
         fourKProgress.setAttribute("stroke-dashoffset", "141")
-        fourKProgress.setAttribute("stroke", "yellow");
+        fourKProgress.setAttribute("stroke", "lightgreen");
         break;
       case "cyberpunk":
         fhdText.textContent = gamesArray[3].fps.fhd;
