@@ -177,7 +177,7 @@ function benchmarkHandler() {
         towKProgress.setAttribute("stroke", "yellow");
 
         fourKText.textContent = gamesArray[3].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "212")
+        fourKProgress.setAttribute("stroke-dashoffset", "212");
         fourKProgress.setAttribute("stroke", "red");
         break;
       case "rdr2":

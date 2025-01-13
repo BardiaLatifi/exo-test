@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/94415f4ef4.js" crossorigin="anonymous"></script>
     <title>Benchmark</title>
   </head>
   <body>
@@ -13,21 +14,20 @@
         <div id="cardsCont">
         </div>
         <div id="carouselControls">
-          <button id="leftBtn"></button>
-          <button id="rightBtn"></button>
+          <button id="leftBtn"><i class="fa-solid fa-play"></i></button>
+          <button id="rightBtn"><i class="fa-solid fa-play"></i></button>
         </div>
         <div id="indicatorLine">
-          <svg width="550" height="100">
-            <line id="line1" class="indicator-line" x1="60" y1="50" x2="120" y2="50" stroke="gray" stroke-width="2"/>
-            <line id="line2" class="indicator-line" x1="120" y1="50" x2="180" y2="50" stroke="gray" stroke-width="2"/>
-            <line id="line3" class="indicator-line" x1="180" y1="50" x2="240" y2="50" stroke="gray" stroke-width="2"/>
-            <line id="line4" class="indicator-line" x1="240" y1="50" x2="300" y2="50" stroke="black" stroke-width="2"/>
-            <line id="line5" class="indicator-line" x1="300" y1="50" x2="360" y2="50" stroke="gray" stroke-width="2"/>
-            <line id="line6" class="indicator-line" x1="360" y1="50" x2="420" y2="50" stroke="gray" stroke-width="2"/>
-            <line id="line7" class="indicator-line" x1="420" y1="50" x2="480" y2="50" stroke="gray" stroke-width="2"/>
+          <svg width="550" height="50">
+            <line id="line1" class="indicator-line" x1="60" y1="40" x2="120" y2="40" stroke="gray" stroke-width="2"/>
+            <line id="line2" class="indicator-line" x1="120" y1="40" x2="180" y2="40" stroke="gray" stroke-width="2"/>
+            <line id="line3" class="indicator-line" x1="180" y1="40" x2="240" y2="40" stroke="gray" stroke-width="2"/>
+            <line id="line4" class="indicator-line" x1="240" y1="40" x2="300" y2="40" stroke="black" stroke-width="2"/>
+            <line id="line5" class="indicator-line" x1="300" y1="40" x2="360" y2="40" stroke="gray" stroke-width="2"/>
+            <line id="line6" class="indicator-line" x1="360" y1="40" x2="420" y2="40" stroke="gray" stroke-width="2"/>
+            <line id="line7" class="indicator-line" x1="420" y1="40" x2="480" y2="40" stroke="gray" stroke-width="2"/>
           </svg>
         </div>
-        
       </div>
       <div id="benchmarkGrid">
         <div id="leftSideCont"><img src="./img/powerup.png"></div>
@@ -38,8 +38,7 @@
             <p class="resolution">4K</p>
           </div>
           <svg class="circular-indicator" width="150" height="150">
-            <circle class="circle-outer" cx="75" cy="75" r="53" />
-            <circle class="circle-bg" cx="75" cy="75" r="45" />
+            <circle class="circle-outer" cx="75" cy="75" r="50" />
             <circle
               class="circle-progress"
               id="fhdProgress"
@@ -62,8 +61,7 @@
             </text>
           </svg>
           <svg class="circular-indicator" width="150" height="150">
-            <circle class="circle-outer" cx="75" cy="75" r="53" />
-            <circle class="circle-bg" cx="75" cy="75" r="45" />
+            <circle class="circle-outer" cx="75" cy="75" r="50" />
             <circle
               class="circle-progress"
               id="twoKProgress"
@@ -86,8 +84,7 @@
             </text>
           </svg>
           <svg class="circular-indicator" width="150" height="150">
-            <circle class="circle-outer" cx="75" cy="75" r="53" />
-            <circle class="circle-bg" cx="75" cy="75" r="45" />
+            <circle class="circle-outer" cx="75" cy="75" r="50" />
             <circle
               class="circle-progress"
               id="fourKProgress"
@@ -113,10 +110,10 @@
         <div id="RightSideCont">
           <svg id="colorGuideCont" width="30" height="100%">
             <defs>
-                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <filter id="shadow" x="-50%" y="-50%" width="300%" height="300%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-                    <feOffset dx="2" dy="2" result="offsetblur" />
-                    <feFlood flood-color="rgba(0, 0, 0, 0.4)" />
+                    <feOffset dx="-1" dy="2.5" result="offsetblur" />
+                    <feFlood flood-color="rgba(0, 0, 0, 0.6)" />
                     <feComposite in2="offsetblur" operator="in" />
                     <feMerge>
                         <feMergeNode />
@@ -125,9 +122,9 @@
                 </filter>
             </defs>
         
-            <circle class="fps-guide-ring" cx="20" cy="12" r="6" stroke="yellow" filter="url(#shadow)" />
-            <circle class="fps-guide-ring" cx="20" cy="92" r="6" stroke="lime" filter="url(#shadow)" />
-            <circle class="fps-guide-ring" cx="20" cy="52" r="6" stroke="lightgreen" filter="url(#shadow)" />
+            <circle class="fps-guide-ring" cx="15" cy="12" r="6" stroke="yellow" filter="url(#shadow)" />
+            <circle class="fps-guide-ring" cx="15" cy="92" r="6" stroke="lime" filter="url(#shadow)" />
+            <circle class="fps-guide-ring" cx="15" cy="52" r="6" stroke="lightgreen" filter="url(#shadow)" />
         </svg>
         <div id="fpsTextCont">
           <p><strong>30+</strong>FPS (ACCEPTABLE)</p>
@@ -137,6 +134,6 @@
         
       </div>
     </div>
-    <script type="module" src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
