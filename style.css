@@ -147,11 +147,16 @@
     font-size: 1.3rem;
     font-weight: 600;
     color: rgb(58, 58, 58);
-    transform: translateX(-10px);
   }
 
+  #resolutionsCont p:nth-child(1) {
+    transform: translate(-6px, 15px);
+}
+  #resolutionsCont p:nth-child(2) {
+    transform: translate(-9px, 15px);
+}
   #resolutionsCont p:nth-child(3) {
-    transform: translateX(0px);
+    transform: translate(-3px, 15px);
 }
   
   .circular-indicator text {
