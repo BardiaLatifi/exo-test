@@ -138,19 +138,21 @@
   }
 
   #resolutionsCont {
-    position: relative;
-    top: 22px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
   }
 
-  #resolutionsCont,
-  #resolutionsCont p {
-    display: flex;
+  #resolutionsCont p{
     font-size: 1.3rem;
-    justify-content: space-around;
+    font-weight: 600;
     color: rgb(58, 58, 58);
+    transform: translateX(-10px);
   }
+
+  #resolutionsCont p:nth-child(3) {
+    transform: translateX(0px);
+}
   
   .circular-indicator text {
     font-size: 2.3rem;
