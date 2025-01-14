@@ -193,32 +193,31 @@
   
   #RightSideCont {
     display: flex;
-    height: 60%;
+    height: 65%;
     align-self: center;
     border-left: 4px solid gray;
     padding-left: 0.5em;
   }
-  
 
   .fps-guide-ring {
     fill: none;
-    stroke-width: 3;
+    stroke-width: 2.5;
   }
 
   #fpsTextCont {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2px 0;
+    padding: 3px 0 11px 0;
   }
 
-  #fpsTextCont strong{
+  #fpsTextCont strong {
     margin-right: 6px;
     font-weight: 800;
     font-size: 0.9rem;
   }
 
-  #fpsTextCont p{
+  #fpsTextCont p {
     font-size: 0.8rem;
     opacity: 0.8;
   }
