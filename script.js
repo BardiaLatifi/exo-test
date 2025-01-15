@@ -1,3 +1,5 @@
+
+/**** VARIABLES ****/
 const cardsCont = document.getElementById("cardsCont");
 
 const leftBtn = document.getElementById("leftBtn");
@@ -5,6 +7,7 @@ const rightBtn = document.getElementById("rightBtn");
 
 let currentlySelectedCard = null;
 
+// The card Objects
 const gamesArray = [
   { id: "CSGO2", src: "./img/image1.jpg", fps: { fhd: 160, twoK: 145, fourK: 80 } },
   { id: "silentHill", src: "./img/image2.jpg", fps: { fhd: 120, twoK: 80, fourK: 55 } },
@@ -15,6 +18,10 @@ const gamesArray = [
   { id: "valorant", src: "./img/image7.jpg", fps: { fhd: 220, twoK: 115, fourK: 95 } },
 ];
 
+
+/**** SLIDER ****/
+
+// Initializing the first look of the slider
 function createGameCards() {
 
   gamesArray.forEach(game => {
@@ -40,6 +47,7 @@ function createGameCards() {
 // Call the function to create and display the game cards
 createGameCards();
 
+// Find the selected card
 function getMiddleCard() {
   const cardsCont = document.getElementById("cardsCont");
   const elementChildren = Array.from(cardsCont.children);
@@ -79,6 +87,7 @@ function slider(direction) {
   updateIndicatorLine();
 }
 
+// Indicator Line
 function updateIndicatorLine() {
   // First, reset all lines to gray
   const lines = document.querySelectorAll('.indicator-line');
@@ -117,117 +126,65 @@ function updateIndicatorLine() {
   benchmarkHandler();
 }
 
+/**** BENCHMARKS ****/
+
 function benchmarkHandler() {
-  const fhdText = document.getElementById("fhdText");
-  const twoKText = document.getElementById("towKText");
-  const fourKText = document.getElementById("fourKText");
 
-  const fhdProgress = document.getElementById("fhdProgress");
-  const towKProgress = document.getElementById("twoKProgress");
-  const fourKProgress = document.getElementById("fourKProgress");
+ // Switch Cases
+ if (currentlySelectedCard) {
+  const selectedGame = gamesArray.find(game => game.id === currentlySelectedCard.id);
+  
+  if (selectedGame) {
+      const fhdValue = selectedGame.fps.fhd;
+      const towKValue = selectedGame.fps.twoK;
+      const fourKValue = selectedGame.fps.fourK;
 
-  if (currentlySelectedCard) {
-    switch (currentlySelectedCard.id) {
-      case "CSGO2":
-        fhdText.textContent = gamesArray[0].fps.fhd;
-        fhdProgress.setAttribute("stroke-dashoffset", "0");
-        fhdProgress.setAttribute("stroke", "lime");
-        
-        twoKText.textContent = gamesArray[0].fps.twoK;
-        towKProgress.setAttribute("stroke-dashoffset", "0");
-        towKProgress.setAttribute("stroke", "lime");
-
-        fourKText.textContent = gamesArray[0].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "70")
-        fourKProgress.setAttribute("stroke", "lightgreen");
-        break;
-      case "silentHill":
-        fhdText.textContent = gamesArray[1].fps.fhd;
-        fhdProgress.setAttribute("stroke-dashoffset", "0");
-        fhdProgress.setAttribute("stroke", "lime");
-
-        twoKText.textContent = gamesArray[1].fps.twoK;
-        towKProgress.setAttribute("stroke-dashoffset", "70");
-        towKProgress.setAttribute("stroke", "lightgreen");
-
-        fourKText.textContent = gamesArray[1].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "141")
-        fourKProgress.setAttribute("stroke", "yellow");
-        break;
-      case "warzone2":
-        fhdText.textContent = gamesArray[2].fps.fhd;
-        fhdProgress.setAttribute("stroke-dashoffset", "0");
-        fhdProgress.setAttribute("stroke", "lime");
-
-        twoKText.textContent = gamesArray[2].fps.twoK;
-        towKProgress.setAttribute("stroke-dashoffset", "141");
-        towKProgress.setAttribute("stroke", "lightgreen");
-
-        fourKText.textContent = gamesArray[2].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "141")
-        fourKProgress.setAttribute("stroke", "lightgreen");
-        break;
-      case "cyberpunk":
-        fhdText.textContent = gamesArray[3].fps.fhd;
-        fhdProgress.setAttribute("stroke-dashoffset", "70");
-        fhdProgress.setAttribute("stroke", "lightgreen");
-
-        twoKText.textContent = gamesArray[3].fps.twoK;
-        towKProgress.setAttribute("stroke-dashoffset", "141");
-        towKProgress.setAttribute("stroke", "yellow");
-
-        fourKText.textContent = gamesArray[3].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "212");
-        fourKProgress.setAttribute("stroke", "red");
-        break;
-      case "rdr2":
-        fhdText.textContent = gamesArray[4].fps.fhd;
-        fhdProgress.setAttribute("stroke-dashoffset", "0");
-        fhdProgress.setAttribute("stroke", "lime");
-
-        twoKText.textContent = gamesArray[4].fps.twoK;
-        towKProgress.setAttribute("stroke-dashoffset", "70");
-        towKProgress.setAttribute("stroke", "lightgreen");
-
-        fourKText.textContent = gamesArray[4].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "141")
-        fourKProgress.setAttribute("stroke", "yellow");
-        break;
-      case "fortnite":
-        fhdText.textContent = gamesArray[5].fps.fhd;
-        fhdProgress.setAttribute("stroke-dashoffset", "0");
-        fhdProgress.setAttribute("stroke", "lime");
-
-        twoKText.textContent = gamesArray[5].fps.twoK;
-        towKProgress.setAttribute("stroke-dashoffset", "0");
-        towKProgress.setAttribute("stroke", "lime");
-
-        fourKText.textContent = gamesArray[5].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "70")
-        fourKProgress.setAttribute("stroke", "lightgreen");
-        break;
-      case "valorant":
-        fhdText.textContent = gamesArray[6].fps.fhd;
-        fhdProgress.setAttribute("stroke-dashoffset", "0");
-        fhdProgress.setAttribute("stroke", "lime");
-
-        twoKText.textContent = gamesArray[6].fps.twoK;
-        towKProgress.setAttribute("stroke-dashoffset", "0");
-        towKProgress.setAttribute("stroke", "lime");
-
-        fourKText.textContent = gamesArray[6].fps.fourK;
-        fourKProgress.setAttribute("stroke-dashoffset", "70")
-        fourKProgress.setAttribute("stroke", "lightgreen");
-        break;
-      default:
-        break;
-    }
+      setProgress("fhdProgress", fhdValue);
+      setProgress("twoKProgress", towKValue);
+      setProgress("fourKProgress", fourKValue);
   }
 }
 
-function progressHandler(index) {
-
 }
+
+/**** ANIMATION ****/
+
+function setProgress(elementId, value) {
+  const circle = document.getElementById(elementId);
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+
+  const offset = circumference - (value / 255 * circumference);
+
+  circle.style.strokeDashoffset = offset;
+
+  animateProgress(value, elementId, circumference);
+}
+
+function animateProgress(targetValue, elementId, circumference) {
+  let currentValue = 0;
+  // Calculate the step to increment
+  const step = Math.ceil(targetValue / 120); // Adjust for speed of animation
+
+  const circle = document.getElementById(elementId);
+  const textElement = document.getElementById(elementId.replace("Progress", "Text"));
+
+  const intervalId = setInterval(() => {
+    if (currentValue < targetValue) {
+      currentValue += step;
+      if (currentValue > targetValue) currentValue = targetValue;
+
+      const offset = circumference - (currentValue / 255 * circumference);
+      circle.style.strokeDashoffset = offset;
+
+      // Update the text display
+      textElement.textContent = currentValue.toFixed(0); // Show as an integer value
+    } else {
+      clearInterval(intervalId);
+    }
+  }, 15);
+}
+
 
 //Events
 leftBtn.addEventListener("click", () => slider("prev"));

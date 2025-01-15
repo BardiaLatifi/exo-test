@@ -177,11 +177,13 @@
     stroke-width: 10;
   }
   
-  .circle-progress {
+  .benchmark-progress {
     fill: none;
     stroke-width: 8;
     transform: rotate(90deg);
+    stroke-linecap: round;
     transform-origin: center;
+    transition: stroke-dasharray 0.5s ease;
   }
   
   .indicator-number {
