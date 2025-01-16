@@ -130,7 +130,6 @@ function updateIndicatorLine() {
 
 function benchmarkHandler() {
 
- // Switch Cases
  if (currentlySelectedCard) {
   const selectedGame = gamesArray.find(game => game.id === currentlySelectedCard.id);
   
@@ -179,6 +178,21 @@ function animateProgress(targetValue, elementId, circumference) {
 
       // Update the text display
       textElement.textContent = currentValue.toFixed(0); // Show as an integer value
+            // Set the color based on currentValue
+            switch (true) {
+              case (currentValue < 30):
+                circle.style.stroke = 'red';
+                break;
+              case (currentValue < 60):
+                circle.style.stroke = 'yellow';
+                break;
+              case (currentValue < 120):
+                circle.style.stroke = 'lightgreen';
+                break;
+              default:
+                circle.style.stroke = 'lime';
+                break;
+            }
     } else {
       clearInterval(intervalId);
     }
